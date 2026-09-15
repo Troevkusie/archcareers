@@ -1,0 +1,19 @@
+<h1>Вход соискателя</h1>
+
+<% if alert %>
+  <div><%= alert %></div>
+<% end %>
+
+<%= form_with url: auth_candidate_session_path, method: :post do |f| %>
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <%= f.submit "Войти" %>
+<% end %>

@@ -2,6 +2,9 @@ class Session < ApplicationRecord
   belongs_to :candidate, optional: true
   belongs_to :employer, optional: true
 
+
+  before_validation(on: :create) { self.token ||= SecureRandom.hex(32) }
+
   validates :token, presence: true, uniqueness: true # встроенный метод валидации рельсы
 
   validate :belongs_to_candidate_or_employer # собственный метод валидации
