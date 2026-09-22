@@ -1,0 +1,26 @@
+<h1>Регистрация работодателя</h1>
+
+<%= form_with model: @employer, url: auth_employer_registration_path do |f| %>
+  <% if @employer.errors.any? %>
+    <div><%= @employer.errors.full_messages.join(", ") %></div>
+  <% end %>
+
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <%= f.submit "Зарегистрироваться" %>
+<% end %>
+
+<%= link_to "Уже есть аккаунт? Войти", new_auth_employer_session_path %>

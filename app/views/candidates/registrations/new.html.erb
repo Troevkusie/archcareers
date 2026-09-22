@@ -1,0 +1,26 @@
+<h1>Регистрация соискателя</h1>
+
+<%= form_with model: @candidate, url: new_auth_candidate_registration_path do |f| %>
+  <% if @candidate.errors.any? %>
+    <div><%= @candidate.errors.full_messages.join(", ") %></div>
+  <% end %>
+
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <%= f.submit "Зарегистрироваться" %>
+<% end %>
+
+<%= link_to "Уже есть аккаунт? Войти", new_auth_candidate_session_path %>
