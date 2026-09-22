@@ -8,4 +8,3 @@ class Candidate < ApplicationRecord
                     format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :password, length: { minimum: 8 }, allow_nil: true
 end
-
