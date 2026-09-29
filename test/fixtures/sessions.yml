@@ -3,13 +3,13 @@
 one:
   candidate: one
   employer: one
-  token: MyString
+  token: token_one
   user_agent: MyString
   ip_address: MyString
 
 two:
   candidate: two
   employer: two
-  token: MyString
+  token: token_two
   user_agent: MyString
   ip_address: MyString
