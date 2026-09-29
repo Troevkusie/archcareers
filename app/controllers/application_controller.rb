@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   def set_current_session
     if (token = cookies.signed[:session_token])
       Current.session = Session.find_by(token: token)
-    end  
+    end
   end
 
   def authenticate_candidate!

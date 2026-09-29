@@ -12,6 +12,3 @@ class CreateSessions < ActiveRecord::Migration[8.1]
     add_index :sessions, :token, unique: true
   end
 end
-
-
-

@@ -3,4 +3,4 @@ class Candidate::DashboardController < ApplicationController
 
   def show
   end
-end 
+end
