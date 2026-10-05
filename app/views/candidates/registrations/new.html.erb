@@ -1,6 +1,6 @@
 <h1>Регистрация соискателя</h1>
 
-<%= form_with model: @candidate, url: new_auth_candidate_registration_path do |f| %>
+<%= form_with model: @candidate, url: auth_candidate_registration_path do |f| %>
   <% if @candidate.errors.any? %>
     <div><%= @candidate.errors.full_messages.join(", ") %></div>
   <% end %>
@@ -23,4 +23,6 @@
   <%= f.submit "Зарегистрироваться" %>
 <% end %>
 
-<%= link_to "Уже есть аккаунт? Войти", new_auth_candidate_session_path %>
+
+
+
