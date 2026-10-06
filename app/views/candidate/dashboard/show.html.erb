@@ -1,0 +1,3 @@
+<h1>Личный кабинет соискателя</h1>
+<p>Добро пожаловать, <%= Current.candidate.email %></p>
+<%= button_to "Выйти", auth_candidate_session_path, method: :delete %>
