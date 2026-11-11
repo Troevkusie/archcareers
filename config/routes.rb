@@ -1,4 +1,4 @@
-  Rails.application.routes.draw do
+Rails.application.routes.draw do
   root "landing#index"
 
   namespace :auth do
