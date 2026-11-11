@@ -27,7 +27,7 @@ class Employers::RegistrationsControllerTest < ActionDispatch::IntegrationTest
       }
     end
 
-    assert_response :unprocessable_entity
+    assert_response :unprocessable_content
   end
 
   test "employer cannot register with an email that is already taken" do
@@ -43,6 +43,6 @@ class Employers::RegistrationsControllerTest < ActionDispatch::IntegrationTest
       }
     end
 
-    assert_response :unprocessable_entity
+    assert_response :unprocessable_content
   end
 end

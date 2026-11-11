@@ -9,7 +9,7 @@ class Candidates::SessionsController < ApplicationController
       redirect_to candidate_dashboard_path
     else
       flash.now[:alert] = "Неверный email или пароль"
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_content
     end
   end
 
