@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # Health check for Kamal: returns 200 if the app boots without exceptions
+  get "up" => "rails/health#show", as: :rails_health_check
+
   root "landing#index"
 
   namespace :auth do
