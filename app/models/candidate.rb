@@ -1,5 +1,5 @@
 class Candidate < ApplicationRecord
-  has_secure_password # что за метод?
+  has_secure_password
   has_many :sessions, dependent: :destroy
 
   normalizes :email, with: ->(email) { email.strip.downcase }

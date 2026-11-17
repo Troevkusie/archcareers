@@ -9,7 +9,7 @@ class Employers::RegistrationsController < ApplicationController
       start_new_session_for(@employer)
       redirect_to employer_dashboard_path
     else
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_content
     end
   end
 

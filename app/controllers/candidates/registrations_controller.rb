@@ -9,7 +9,7 @@ class Candidates::RegistrationsController < ApplicationController
       start_new_session_for(@candidate)
       redirect_to candidate_dashboard_path
     else
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_content
     end
   end
 
